@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import 'normalize.css/normalize.css';
+import 'react-dates/lib/css/_datepicker.css';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addExpense, editExpense, removeExpense } from './actions/expenses';
@@ -18,11 +19,6 @@ store.dispatch(addExpense({ description: 'Rent', amount: 1950, createdAt: 10003 
 const state = store.getState();
 
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-
-const arr = [1, 2, 3];
-console.log(arr);
-arr.push(4);
-console.log(arr);
 
 const jsx = (
     <Provider store={store}>
