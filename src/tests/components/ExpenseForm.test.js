@@ -68,8 +68,7 @@ describe('test the ExpenseForm with no expense data passed in', () => {
 });
 
 describe('test the ExpenseForm with spies', () => {
-  let wrapper;
-  let onSubmitSpy;
+  let wrapper, onSubmitSpy;
 
   beforeEach(() => {
     onSubmitSpy = jest.fn();
